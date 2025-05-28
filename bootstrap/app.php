@@ -6,6 +6,9 @@ require __DIR__ . DIRECTORY_SEPARATOR . 'paths.php';
 require VENDOR_DIR . DS . 'autoload.php';
 
 use App\Application;
+use App\Container\Container;
 
-$app = new Application();
+$container = new Container();
+
+$app = new Application($container);
 $app->run();
