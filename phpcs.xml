@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ruleset name="phpcs ruleset">
-    <rule ref="PSR12">
-        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock" />
-    </rule>
+    <rule ref="PSR12" />
 
     <file>bootstrap/</file>
     <file>public/</file>
