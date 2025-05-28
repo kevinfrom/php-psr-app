@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ruleset name="phpcs ruleset">
+    <rule ref="PSR12"/>
+
+    <file>bootstrap/</file>
+    <file>public/</file>
+    <file>src/</file>
+    <file>tests/</file>
+
+    <exclude-pattern>vendor/*</exclude-pattern>
+
+    <arg name="colors" />
+</ruleset>
