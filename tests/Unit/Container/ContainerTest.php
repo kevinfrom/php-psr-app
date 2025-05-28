@@ -5,6 +5,7 @@ namespace App\Tests\Unit\Container;
 
 use App\Container\Container;
 use App\Tests\Utility\Container\TestObject;
+use App\Tests\Utility\Container\TestObjectWithDependencies;
 use PHPUnit\Framework\TestCase;
 
 final class ContainerTest extends TestCase
@@ -30,5 +31,15 @@ final class ContainerTest extends TestCase
         $instance = $container->get(TestObject::class);
 
         $this->assertInstanceOf(TestObject::class, $instance);
+    }
+
+    public function testResolve(): void
+    {
+        $container = new Container();
+
+        $this->assertFalse($container->has(TestObject::class));
+
+        $instance = $container->get(TestObjectWithDependencies::class);
+        $this->assertInstanceOf(TestObjectWithDependencies::class, $instance);
     }
 }
