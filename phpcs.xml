@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ruleset name="phpcs ruleset">
-    <rule ref="PSR12" />
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="linesCountBeforeDeclare" value="0"/>
+            <property name="spacesCountAroundEqualsSign" value="0"/>
+        </properties>
+    </rule>
+
+    <rule ref="PSR12">
+        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock"/>
+    </rule>
 
     <file>bootstrap/</file>
     <file>public/</file>
@@ -9,5 +18,5 @@
 
     <exclude-pattern>vendor/*</exclude-pattern>
 
-    <arg name="colors" />
+    <arg name="colors"/>
 </ruleset>
