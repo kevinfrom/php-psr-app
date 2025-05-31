@@ -35,6 +35,8 @@ final class StreamLogger implements LoggerInterface
      */
     public function log($level, Stringable|string $message, array $context = []): void
     {
+        $level = $this->parseLevel($level);
+
         if ($context) {
             $message = $this->interpolate($message, $context);
         }

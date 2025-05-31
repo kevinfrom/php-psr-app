@@ -4,10 +4,31 @@ declare(strict_types=1);
 namespace App\Logging;
 
 use DateTime;
+use InvalidArgumentException;
 use Stringable;
 
 trait LoggerTrait
 {
+    /**
+     * Parse level to a string.
+     *
+     * @param $level
+     *
+     * @return string
+     */
+    public function parseLevel($level): string
+    {
+        if (is_string($level)) {
+            return $level;
+        }
+
+        if ($level instanceof Stringable) {
+            return $level->__toString();
+        }
+
+        throw new InvalidArgumentException("Invalid log level: " . gettype($level));
+    }
+
     /**
      * Interpolates the message with the context values.
      *
