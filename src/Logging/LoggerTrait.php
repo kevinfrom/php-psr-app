@@ -12,11 +12,11 @@ trait LoggerTrait
     /**
      * Parse level to a string.
      *
-     * @param $level
+     * @param mixed $level
      *
      * @return string
      */
-    public function parseLevel($level): string
+    public function parseLevel(mixed $level): string
     {
         if (is_string($level)) {
             return $level;
