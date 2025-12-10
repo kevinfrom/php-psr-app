@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 /**
  * Front controller.
- * 
  * This handles all requests and dispatches the application.
  */
 
