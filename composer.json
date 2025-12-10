@@ -1,0 +1,20 @@
+{
+    "name": "kevinfrom/php-psr-app",
+    "description": "A simple PHP web app built entirely using PSR standards.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin From",
+            "email": "kf+bitbucket@vestjyskmarketing.dk"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "KevinFrom\\PhpPsr\\App\\": "app/src/",
+            "KevinFrom\\PhpPsr\\Core\\": "core/src/"
+        }
+    },
+    "require": {}
+}

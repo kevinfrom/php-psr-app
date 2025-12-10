@@ -1,0 +1,5 @@
+.idea
+.code
+.env*
+vendor
+robots.txt
