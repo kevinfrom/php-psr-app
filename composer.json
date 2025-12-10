@@ -43,6 +43,7 @@
         "phpstan/phpstan": "^2.1.33",
         "friendsofphp/php-cs-fixer": "^3.91.3",
         "phpunit/phpunit": "^10.5.60",
-        "symfony/var-dumper": "^6.4.26"
+        "symfony/var-dumper": "^6.4.26",
+        "psr/container": "^2.0"
     }
 }
