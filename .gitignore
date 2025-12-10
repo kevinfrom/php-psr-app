@@ -3,3 +3,4 @@
 .env*
 vendor
 robots.txt
+.php-cs-fixer.cache

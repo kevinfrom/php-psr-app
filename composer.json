@@ -6,10 +6,13 @@
 	"scripts": {
 		"qa": [
 			"@rector",
-			"@phpstan"
+			"@static-analysis",
+			"@lint"
 		],
 		"rector": "rector",
-		"phpstan": "phpstan"
+		"static-analysis": "phpstan",
+		"lint": "php-cs-fixer check",
+		"lint:fix": "php-cs-fixer fix"
 	},
     "authors": [
         {
@@ -29,6 +32,7 @@
 	},
     "require-dev": {
         "rector/rector": "^2.2.14",
-        "phpstan/phpstan": "^2.1.33"
+        "phpstan/phpstan": "^2.1.33",
+        "friendsofphp/php-cs-fixer": "^3.91"
     }
 }
