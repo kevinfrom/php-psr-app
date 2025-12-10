@@ -33,6 +33,6 @@
     "require-dev": {
         "rector/rector": "^2.2.14",
         "phpstan/phpstan": "^2.1.33",
-        "friendsofphp/php-cs-fixer": "^3.91"
+        "friendsofphp/php-cs-fixer": "^3.91.3"
     }
 }
