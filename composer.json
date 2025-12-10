@@ -7,12 +7,14 @@
 		"qa": [
 			"@rector",
 			"@static-analysis",
-			"@lint"
+			"@lint",
+            "@test"
 		],
 		"rector": "rector",
 		"static-analysis": "phpstan",
 		"lint": "php-cs-fixer check",
-		"lint:fix": "php-cs-fixer fix"
+		"lint:fix": "php-cs-fixer fix",
+        "test": "phpunit tests --configuration phpunit.xml"
 	},
     "authors": [
         {
@@ -27,12 +29,19 @@
             "KevinFrom\\PhpPsr\\Core\\": "core/src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "KevinFrom\\PhpPsr\\Tests\\": "tests"
+        }
+    },
     "require": {
 		"php": "^8.1"
 	},
     "require-dev": {
         "rector/rector": "^2.2.14",
         "phpstan/phpstan": "^2.1.33",
-        "friendsofphp/php-cs-fixer": "^3.91.3"
+        "friendsofphp/php-cs-fixer": "^3.91.3",
+        "phpunit/phpunit": "^10.5.60",
+        "symfony/var-dumper": "^6.4.26"
     }
 }

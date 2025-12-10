@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit
+    bootstrap="tests/bootstrap.php"
+    colors="true"
+    executionOrder="depends,defects"
+    cacheResult="true"
+    failOnRisky="true"
+    failOnWarning="true"
+>
+    <testsuites>
+        <testsuite name="Core Tests">
+            <directory>tests/core</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="display_errors" value="-1"/>
+    </php>
+</phpunit>

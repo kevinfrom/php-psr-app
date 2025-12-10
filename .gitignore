@@ -4,3 +4,8 @@
 vendor
 robots.txt
 .php-cs-fixer.cache
+.phpunit.result.cache
+logs/*
+!logs/.gitkeep
+tests/Logger/logs/*
+!tests/Logger/logs/.gitkeep
